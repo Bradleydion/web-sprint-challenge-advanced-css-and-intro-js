@@ -212,7 +212,7 @@ console.log (artists[0].name)
 console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-artists[9].name="Vincent Van Gough";
+artists.splice (9,1,{name:"Vincent Van Goh"})
 console.log(artists[9].name)
 
 
@@ -228,7 +228,7 @@ function getArtistByIndex(array, index) {
    array[index]
         return(`The artist at index ${array[index].id} is ${array[index].name}.`)
       }
-  console.log(getArtistByIndex(artists,17))
+  console.log(getArtistByIndex(artists,0))
   /**
 
 
@@ -255,8 +255,8 @@ console.log(get20s(artists))
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(array, index, howmanytoremove) {
-   array.splice(index, howmanytoremove);
+function removeArtist(array, index) {
+   array.splice(index, 1);
    
   console.log(array.length)
   }
