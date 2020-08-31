@@ -256,10 +256,14 @@ console.log(get20s(artists))
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(array, index, howmanytoremove) {
+   array.splice(index, howmanytoremove);
+   
+  console.log(array.length)
   }
-  
+  removeArtist(artists,1,1)
+  removeArtist(artists,0,1)
+
  
 
 /**
@@ -275,12 +279,11 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(id,name,years,genere,nationality,bio){
+ artists.push({id, name, years, genere, nationality, bio})
   }
-
+addArtist(20,"Bradley Dion","1988 - ", "Web Design", "American", "I can write stuff. Or I could not")
+console.log(artists)
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
