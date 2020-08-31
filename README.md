@@ -23,9 +23,22 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. How would you describe acessibility on the web to someone new to programming?
+
+Acessibility is considered when desigining with users who have disabilities in mind. Desiging with acessibility in mind means we consider screen size, element size, font size, ease of use, and colors when designing. Specifically with web, we design using responsive units that will react to each individual users settings as well as their different size screens and devices. 
+
 2. Talk about 3 different things you can do to ensure your website is accessible. 
+
+One of the key things to keep in mind is viewability- making sure our designs are responsive in terms of using percentages and rems when seting font sizes and image sizes. Also using breakpoints with logical responsive changes, you wouldnt want to move from a full screen computer to a small screen mobile device and loose the ability to read somthing or see graphics (images) 
+Secondly, contrasting between for ground and background is helpful, especially when conveing importance. 
+Thirdly, consistency is key, keeping navigation functions consistent within your design as well as consistent with other designs (share buttons look the same and act the same)
+
 3. How would you explain the concept of a variable to someone new to programming?
+
+Variables, to me, are containers we use in web designe to store data. Each individual container has a collection of data we chose to store in it. These containers can have 3 different names; a var, a let, and a const. Vars are ever changing. From their title to what we store in them, they can be reused and changed as often as we like. Lets- keep their title, but what they contain can be changed. Const are final (constant if you will) and will keep the data and title you give them.  
+
 4. What is the purpose of using functions in code?
+
+Using a function in code helps us keep our code d.r.y and allows for us to repeat sections of code in a single line.  
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 

@@ -209,7 +209,6 @@ const artists = [
 console.log (artists[0].name)
 
 // (2) Bio of the third artist (2nd index) in the array 
-
 console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
@@ -291,13 +290,16 @@ console.log(artists)
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
-
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+let soMuchArt=[]
+function lotsOfArt(array){
+for(let i =0; i<array.length; i++){
+  if(array[i].paintings > 100){
+  soMuchArt.push(array[i].name)
+  }
 }
-
+}
+lotsOfArt(artists)
+console.log(soMuchArt)
 
 
 // 🎨🎨 STRETCH 🎨🎨//
@@ -332,11 +334,11 @@ function getHTML(/* Code here */){
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(array){
 
-    /* Code here */
+   shuffle(array)
 
   }
-
+console.log(randomiz(artists))
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
