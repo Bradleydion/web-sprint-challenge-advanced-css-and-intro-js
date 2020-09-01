@@ -203,17 +203,30 @@ const artists = [
 
 // 🖌🖼 M V P 🖼🖌 //
 
-/* Task 1: Practice accessing data above by console.log-ing following items:
+/* Task 1: Practice accessing data above by console.log-ing following items:*/
 
-(1) Name of the first artist (0th index) in the array
-(2) Bio of the third artist (2nd index) in the array */
+// (1) Name of the first artist (0th index) in the array 
+console.log (artists[0].name)
 
-
+// (2) Bio of the third artist (2nd index) in the array 
+console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+// artists[9].name = "Vincent Van Goh" original answer
 
+artists.splice (9,1,{name:"Vincent Van Goh"})
+console.log(artists[9].name)
 
+// artists.splice (9,1,{id: 9,
+// name: "Gustav Klimt",
+// years: "1862 - 1918",
+// genre: "Symbolism, Art Nouveau",
+// nationality: "Austrian",
+// bio: "Gustav Klimt (July 14, 1862 – February 6, 1918) was an Austrian symbolist painter and one of the most prominent members of the Vienna Secession movement. Klimt is noted for his paintings, murals, sketches, and other objets d'art. Klimt's primary subject was the female body, and his works are marked by a frank eroticism. In addition to his figurative works, which include allegories and portraits, he painted landscapes. Among the artists of the Vienna Secession, Klimt was the most influenced by Japanese art and its methods.",
+// wikipedia: "http://en.wikipedia.org/wiki/Gustav_Klimt",
+// paintings: 117})
+// console.log(artists[9].name) Long Answer
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
  *     (2) a number which is the desired index in the array.
@@ -223,19 +236,24 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array, index) {
-    /* code here */
-  }
-  
+   array[index]
+        return(`The artist at index ${array[index].id} is ${array[index].name}.`)
+      }
+  console.log(getArtistByIndex(artists,0))
   /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/* Code here */){
-
-  /* Code here */
-
-}
+function get20s(array){
+  let twentyCentury=[]
+  for(let i =0; i<array.length; i++)
+  if(array[i].years.split('-')>= "1900" && array[i].years.split('-')<= "1999"){
+    twentyCentury.push(array[i].name)}
+    return(twentyCentury)
+  }
+console.log(get20s(artists))
+ 
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -248,10 +266,14 @@ function get20s(/* Code here */){
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(array, index) {
+   array.splice(index, 1);
+   
+  console.log(array.length)
   }
-  
+  removeArtist(artists,1,1)
+  removeArtist(artists,0,1)
+
  
 
 /**
@@ -267,12 +289,11 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(id,name,years,genere,nationality,bio){
+ artists.push({id, name, years, genere, nationality, bio})
   }
-
+addArtist(20,"Bradley Dion","1988 - ", "Web Design", "American", "I can write stuff. Or I could not")
+console.log(artists)
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
     (1) artists array 
@@ -280,13 +301,16 @@ function addArtist(/* Code here */){
 and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
-
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+let soMuchArt=[]
+function lotsOfArt(array){
+for(let i =0; i<array.length; i++){
+  if(array[i].paintings > 100){
+  soMuchArt.push(array[i].name)
+  }
 }
-
+}
+lotsOfArt(artists)
+console.log(soMuchArt)
 
 
 // 🎨🎨 STRETCH 🎨🎨//
@@ -321,11 +345,11 @@ function getHTML(/* Code here */){
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
-function randomize(/* Code here */){
+function randomize(array){
 
-    /* Code here */
+   shuffle(array)
 
   }
-
+console.log(randomiz(artists))
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
