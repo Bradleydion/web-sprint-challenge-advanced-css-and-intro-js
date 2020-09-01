@@ -212,10 +212,21 @@ console.log (artists[0].name)
 console.log(artists[2].bio)
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+
+// artists[9].name = "Vincent Van Goh" original answer
+
 artists.splice (9,1,{name:"Vincent Van Goh"})
 console.log(artists[9].name)
 
-
+// artists.splice (9,1,{id: 9,
+// name: "Gustav Klimt",
+// years: "1862 - 1918",
+// genre: "Symbolism, Art Nouveau",
+// nationality: "Austrian",
+// bio: "Gustav Klimt (July 14, 1862 – February 6, 1918) was an Austrian symbolist painter and one of the most prominent members of the Vienna Secession movement. Klimt is noted for his paintings, murals, sketches, and other objets d'art. Klimt's primary subject was the female body, and his works are marked by a frank eroticism. In addition to his figurative works, which include allegories and portraits, he painted landscapes. Among the artists of the Vienna Secession, Klimt was the most influenced by Japanese art and its methods.",
+// wikipedia: "http://en.wikipedia.org/wiki/Gustav_Klimt",
+// paintings: 117})
+// console.log(artists[9].name) Long Answer
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
  *     (2) a number which is the desired index in the array.
